@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "AllenTabBarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -21,9 +21,13 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
 
-    ViewController *viewController = [[ViewController alloc]init];
+//    ViewController *viewController = [[ViewController alloc]init];
+    AllenTabBarViewController *tabbarController = [[AllenTabBarViewController alloc]init];
     
-    self.window.rootViewController = viewController;
+
+    
+    
+    self.window.rootViewController = tabbarController;
     
     [self.window makeKeyWindow];
     return YES;
