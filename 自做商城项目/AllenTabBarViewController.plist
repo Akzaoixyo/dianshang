@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>tabbarChileController</key>
+		<string>AllenTimeViewController</string>
+		<key>tabbarTitle</key>
+		<string>限时购</string>
+		<key>tabbarSelectImage</key>
+		<string>菜单栏限时特卖按钮选中状态</string>
+		<key>tabbarImage</key>
+		<string>菜单栏限时特卖按钮未选中状态</string>
+	</dict>
+	<dict>
+		<key>tabbarChileController</key>
+		<string>AllenClassViewController</string>
+		<key>tabbarTitle</key>
+		<string>分类</string>
+		<key>tabbarSelectImage</key>
+		<string>菜单栏分类按钮选中状态</string>
+		<key>tabbarImage</key>
+		<string>菜单栏分类按钮未选中状态</string>
+	</dict>
+	<dict>
+		<key>tabbarChileController</key>
+		<string>AllenBuyCarViewController</string>
+		<key>tabbarTitle</key>
+		<string>购物车</string>
+		<key>tabbarSelectImage</key>
+		<string>菜单栏购物车按钮选中状态</string>
+		<key>tabbarImage</key>
+		<string>菜单栏购物车按钮未选中状态</string>
+	</dict>
+	<dict>
+		<key>tabbarChileController</key>
+		<string>AllenMyViewController</string>
+		<key>tabbarTitle</key>
+		<string>我的</string>
+		<key>tabbarSelectImage</key>
+		<string>菜单栏我的按钮选中状态</string>
+		<key>tabbarImage</key>
+		<string>菜单栏我的按钮未选中状态</string>
+	</dict>
+</array>
+</plist>

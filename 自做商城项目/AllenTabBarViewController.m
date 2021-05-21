@@ -7,12 +7,26 @@
 //
 
 #import "AllenTabBarViewController.h"
+#import "AllenTimeViewController.h"
+#import "AllenMyViewController.h"
+#import "AllenClassViewController.h"
+#import "AllenBuyCarViewController.h"
 
 @interface AllenTabBarViewController ()
+
+@property (strong ,nonatomic) NSArray *tabBarMessageArray;
 
 @end
 
 @implementation AllenTabBarViewController
+
+-(NSArray *)tabBarMessageArray{
+    if (!_tabBarMessageArray) {
+        _tabBarMessageArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AllenTabBarViewController" ofType:@"plist"]];
+    }
+    return _tabBarMessageArray;
+                               
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,33 +36,16 @@
     [item setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10.0f],NSForegroundColorAttributeName:[UIColor colorWithRed:57.0/255.0 green:167.0/255.0  blue:241.0/255.0  alpha:1]} forState:(UIControlStateSelected)];
     
     //添加自定义控制器
-    UIViewController *viewController1 = [[UIViewController alloc]init];
-    viewController1.view.backgroundColor = [UIColor orangeColor];
-    viewController1.tabBarItem.image = [UIImage imageNamed:@"菜单栏限时特卖按钮未选中状态"];
-    viewController1.tabBarItem.selectedImage = [UIImage imageNamed:@"菜单栏限时特卖按钮选中状态"];
-    viewController1.tabBarItem.title = @"限时购";
-    [self addChildViewController:viewController1];
+    for (NSDictionary *dic in self.tabBarMessageArray) {
+        Class viewControllerClass = NSClassFromString(dic[@"tabbarChileController"]);
+        UIViewController *viewController = [[viewControllerClass alloc]init];
+        viewController.tabBarItem.image = [UIImage imageNamed:dic[@"tabbarImage"]];
+        viewController.tabBarItem.selectedImage = [UIImage imageNamed:dic[@"tabbarSelectImage"]];
+        viewController.tabBarItem.title = dic[@"tabbarTitle"];
+        [self addChildViewController:viewController];
+    }
     
-    UIViewController *viewController2 = [[UIViewController alloc]init];
-    viewController2.view.backgroundColor = [UIColor redColor];
-    viewController2.tabBarItem.image = [UIImage imageNamed:@"菜单栏分类按钮未选中状态"];
-    viewController2.tabBarItem.selectedImage = [UIImage imageNamed:@"菜单栏分类按钮选中状态"];
-    viewController2.tabBarItem.title = @"分类";
-    [self addChildViewController:viewController2];
-    
-    UIViewController *viewController3 = [[UIViewController alloc]init];
-    viewController3.view.backgroundColor = [UIColor blackColor];
-    viewController3.tabBarItem.image = [UIImage imageNamed:@"菜单栏购物车按钮未选中状态"];
-    viewController3.tabBarItem.selectedImage = [UIImage imageNamed:@"菜单栏购物车按钮选中状态"];
-    viewController3.tabBarItem.title = @"购物车";
-    [self addChildViewController:viewController3];
-    
-    UIViewController *viewController4 = [[UIViewController alloc]init];
-    viewController4.view.backgroundColor = [UIColor grayColor];
-    viewController4.tabBarItem.image = [UIImage imageNamed:@"菜单栏我的按钮未选中状态"];
-    viewController4.tabBarItem.selectedImage = [UIImage imageNamed:@"菜单栏我的按钮选中状态"];
-    viewController4.tabBarItem.title = @"我的";
-    [self addChildViewController:viewController4];
+
 }
 
 - (void)didReceiveMemoryWarning {
