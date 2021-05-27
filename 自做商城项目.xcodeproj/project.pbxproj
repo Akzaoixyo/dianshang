@@ -22,6 +22,7 @@
 		897E27D11EF90DA4000E416A /* AllenBuyCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897E27D01EF90DA4000E416A /* AllenBuyCarViewController.m */; };
 		897E27D41EF90DB2000E416A /* AllenMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897E27D31EF90DB2000E416A /* AllenMyViewController.m */; };
 		897E27D61EF91204000E416A /* AllenTabBarViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 897E27D51EF91204000E416A /* AllenTabBarViewController.plist */; };
+		897E27D91EF91750000E416A /* AllenNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897E27D81EF91750000E416A /* AllenNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		897E27D21EF90DB2000E416A /* AllenMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllenMyViewController.h; sourceTree = "<group>"; };
 		897E27D31EF90DB2000E416A /* AllenMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllenMyViewController.m; sourceTree = "<group>"; };
 		897E27D51EF91204000E416A /* AllenTabBarViewController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AllenTabBarViewController.plist; sourceTree = "<group>"; };
+		897E27D71EF91750000E416A /* AllenNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllenNavigationController.h; sourceTree = "<group>"; };
+		897E27D81EF91750000E416A /* AllenNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllenNavigationController.m; sourceTree = "<group>"; };
 		8EF8E7603C1232A345FE6DAA /* Pods-自做商城项目.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-自做商城项目.release.xcconfig"; path = "Pods/Target Support Files/Pods-自做商城项目/Pods-自做商城项目.release.xcconfig"; sourceTree = "<group>"; };
 		F38FD43D65DCA48D419C796C /* libPods-自做商城项目.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-自做商城项目.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,6 +149,8 @@
 				897E27921EF7B627000E416A /* AppDelegate.m */,
 				897E27C61EF90A63000E416A /* AllenTabBarViewController.h */,
 				897E27C71EF90A63000E416A /* AllenTabBarViewController.m */,
+				897E27D71EF91750000E416A /* AllenNavigationController.h */,
+				897E27D81EF91750000E416A /* AllenNavigationController.m */,
 				897E27D51EF91204000E416A /* AllenTabBarViewController.plist */,
 				897E27C91EF90D78000E416A /* AllenTimeViewController.h */,
 				897E27CA1EF90D78000E416A /* AllenTimeViewController.m */,
@@ -384,6 +389,7 @@
 				897E27CE1EF90D93000E416A /* AllenClassViewController.m in Sources */,
 				897E27C81EF90A63000E416A /* AllenTabBarViewController.m in Sources */,
 				897E27961EF7B627000E416A /* ViewController.m in Sources */,
+				897E27D91EF91750000E416A /* AllenNavigationController.m in Sources */,
 				897E279C1EF7B627000E416A /* ______.xcdatamodeld in Sources */,
 				897E27931EF7B627000E416A /* AppDelegate.m in Sources */,
 				897E27CB1EF90D78000E416A /* AllenTimeViewController.m in Sources */,

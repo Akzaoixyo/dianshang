@@ -11,6 +11,7 @@
 #import "AllenMyViewController.h"
 #import "AllenClassViewController.h"
 #import "AllenBuyCarViewController.h"
+#import "AllenNavigationController.h"
 
 @interface AllenTabBarViewController ()
 
@@ -41,8 +42,10 @@
         UIViewController *viewController = [[viewControllerClass alloc]init];
         viewController.tabBarItem.image = [UIImage imageNamed:dic[@"tabbarImage"]];
         viewController.tabBarItem.selectedImage = [UIImage imageNamed:dic[@"tabbarSelectImage"]];
-        viewController.tabBarItem.title = dic[@"tabbarTitle"];
-        [self addChildViewController:viewController];
+//        viewController.tabBarItem.title = dic[@"tabbarTitle"];
+        viewController.title = dic[@"tabbarTitle"];
+        AllenNavigationController *navgation = [[AllenNavigationController alloc]initWithRootViewController:viewController];
+        [self addChildViewController:navgation];
     }
     
 
