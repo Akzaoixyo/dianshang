@@ -73,6 +73,7 @@
 		897E27F21EF92BD6000E416A /* AllenMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllenMyViewController.m; sourceTree = "<group>"; };
 		897E27F81EF92BD6000E416A /* AllenTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllenTimeViewController.h; sourceTree = "<group>"; };
 		897E27F91EF92BD6000E416A /* AllenTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllenTimeViewController.m; sourceTree = "<group>"; };
+		897E28041EF96009000E416A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8EF8E7603C1232A345FE6DAA /* Pods-自做商城项目.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-自做商城项目.release.xcconfig"; path = "Pods/Target Support Files/Pods-自做商城项目/Pods-自做商城项目.release.xcconfig"; sourceTree = "<group>"; };
 		F38FD43D65DCA48D419C796C /* libPods-自做商城项目.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-自做商城项目.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -152,6 +153,7 @@
 				897E27EF1EF92BD6000E416A /* 我的 */,
 				897E27911EF7B627000E416A /* AppDelegate.h */,
 				897E27921EF7B627000E416A /* AppDelegate.m */,
+				897E28041EF96009000E416A /* PrefixHeader.pch */,
 				897E27941EF7B627000E416A /* ViewController.h */,
 				897E27951EF7B627000E416A /* ViewController.m */,
 				897E279D1EF7B627000E416A /* Assets.xcassets */,
@@ -706,6 +708,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 857N544TZ2;
+				GCC_PREFIX_HEADER = "自做商城项目/PrefixHeader.pch";
 				INFOPLIST_FILE = "自做商城项目/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -721,6 +724,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 857N544TZ2;
+				GCC_PREFIX_HEADER = "自做商城项目/PrefixHeader.pch";
 				INFOPLIST_FILE = "自做商城项目/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

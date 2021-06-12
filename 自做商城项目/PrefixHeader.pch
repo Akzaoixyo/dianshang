@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  自做商城项目
+//
+//  Created by allenL on 2017/6/20.
+//  Copyright © 2017年 tam. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define RGB(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a];
+
+
+#import <Masonry.h>
+
+#endif /* PrefixHeader_pch */

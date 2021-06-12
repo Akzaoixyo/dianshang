@@ -7,15 +7,16 @@
 //
 
 #import "AllenMyViewController.h"
-#import <Masonry.h>
+
 /*--
  顶部登陆与注册
  --AllenL*/
-@interface AllenMyViewController ()
+@interface AllenMyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong , nonatomic) UIView *headView;
 @property (strong , nonatomic) UIImageView *headBackImage;
 @property (strong ,nonatomic) UIButton *loginBtn;
 @property (strong ,nonatomic) UIButton *landingBtn;
+@property (strong , nonatomic) UITableView *messageTable;
 @end
 
 @implementation AllenMyViewController
@@ -23,12 +24,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = 0;
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = RGB(242, 242, 242);
+    
+    
     
     [self.view addSubview:self.headView];
     [self.headView addSubview:self.headBackImage];
     [self.headView addSubview:self.loginBtn];
     [self.headView addSubview: self.landingBtn];
+    [self.view addSubview:self.messageTable];
     
     
     __weak typeof (self) weakSelf = self;
@@ -50,6 +54,12 @@
         make.centerX.equalTo(weakSelf.headView.mas_centerX).offset(-60);
         make.centerY.equalTo(weakSelf.headView.mas_centerY);
         make.size.mas_equalTo(CGSizeMake(45, 23));
+    }];
+    
+    [_messageTable mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.right.equalTo(weakSelf.view);
+        make.height.mas_equalTo(176);
+        make.top.equalTo(weakSelf.headView.mas_bottom).offset(35);
     }];
     
     // Do any additional setup after loading the view.
@@ -93,6 +103,40 @@
     }
     return _landingBtn;
     
+}
+
+
+- (UITableView *)messageTable{
+    if (!_messageTable) {
+        _messageTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 0, 0) style:(UITableViewStylePlain)];
+        _messageTable.delegate = self;
+        _messageTable.dataSource = self;
+        _messageTable.bounces = NO;
+    }
+    return _messageTable;
+
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 4;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 44.0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%li" , indexPath.row];
+    return cell;
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"我选中的是第%li",indexPath.row);
 }
 
 - (void)didReceiveMemoryWarning {
