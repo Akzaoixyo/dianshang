@@ -11,6 +11,16 @@
 
 #define RGB(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a];
+#define MainColor [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1];
+
+/*--
+ 自定义nslog,
+ --AllenL*/
+#ifdef DEBUG      //判断是不是开发，调试状态，如果是开发，调试状态，就让allenLog替换NSlog
+#define AllenLog(...) NSLog(__VA_ARGS__)   //AllenLog 是不限制参数的，中间用三个英文句号表示
+#elif             //如果是发布状态AllenLog就直接为空
+#define AllenLog(...)
+#endif
 
 
 #import <Masonry.h>

@@ -23,6 +23,7 @@
 		897E28011EF92BD6000E416A /* AllenTabBarViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 897E27EE1EF92BD6000E416A /* AllenTabBarViewController.plist */; };
 		897E28021EF92BD6000E416A /* AllenMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897E27F21EF92BD6000E416A /* AllenMyViewController.m */; };
 		897E28031EF92BD6000E416A /* AllenTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897E27F91EF92BD6000E416A /* AllenTimeViewController.m */; };
+		897E28071EFA3F1F000E416A /* AllenMyMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 897E28061EFA3F1F000E416A /* AllenMyMessageTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		897E27F81EF92BD6000E416A /* AllenTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllenTimeViewController.h; sourceTree = "<group>"; };
 		897E27F91EF92BD6000E416A /* AllenTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllenTimeViewController.m; sourceTree = "<group>"; };
 		897E28041EF96009000E416A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		897E28051EFA3F1F000E416A /* AllenMyMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllenMyMessageTableViewCell.h; sourceTree = "<group>"; };
+		897E28061EFA3F1F000E416A /* AllenMyMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllenMyMessageTableViewCell.m; sourceTree = "<group>"; };
 		8EF8E7603C1232A345FE6DAA /* Pods-自做商城项目.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-自做商城项目.release.xcconfig"; path = "Pods/Target Support Files/Pods-自做商城项目/Pods-自做商城项目.release.xcconfig"; sourceTree = "<group>"; };
 		F38FD43D65DCA48D419C796C /* libPods-自做商城项目.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-自做商城项目.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -322,6 +325,8 @@
 		897E27F51EF92BD6000E416A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				897E28051EFA3F1F000E416A /* AllenMyMessageTableViewCell.h */,
+				897E28061EFA3F1F000E416A /* AllenMyMessageTableViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				897E27961EF7B627000E416A /* ViewController.m in Sources */,
 				897E27FD1EF92BD6000E416A /* AllenClassViewController.m in Sources */,
 				897E279C1EF7B627000E416A /* ______.xcdatamodeld in Sources */,
+				897E28071EFA3F1F000E416A /* AllenMyMessageTableViewCell.m in Sources */,
 				897E27FE1EF92BD6000E416A /* AllenBuyCarViewController.m in Sources */,
 				897E27931EF7B627000E416A /* AppDelegate.m in Sources */,
 				897E28031EF92BD6000E416A /* AllenTimeViewController.m in Sources */,
